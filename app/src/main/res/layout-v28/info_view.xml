@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/top_elements"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="#FF12364A"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/banner_iv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="1.33"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/banner_d"
+                tools:srcCompat="@drawable/hugo_legacy_i" />
+
+            <TextView
+                android:id="@+id/info_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/inder"
+                android:textSize="21sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/banner_iv"
+                tools:text="Hugo Legacy" />
+
+            <ImageView
+                android:id="@+id/info_type_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/banner_iv"
+                app:srcCompat="@drawable/review_category_i"
+                tools:ignore="ContentDescription"/>
+
+            <TextView
+                android:id="@+id/info_text_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="16sp"
+                android:lineHeight="25dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info_title_tv"
+                tools:text="Hugo Legacy bleibt Hugos ursprünglichem Format treu und zeigt weiterhin das Telefon, das den Kern dieses Themas bildet. Es befindet sich neben den Walzen und wartet geduldig darauf, zu klingeln. Dies geschieht erst zum ersten Mal, wenn Sie 15 Gewinnsymbole gesammelt haben. An diesem Punkt wird einer der zufälligen Modifikatoren eintreffen. Jeder der Charaktere hat seine eigene besondere Kraft und sie könnten zusätzliche Wilds, die Zerstörung unerwünschter Symbole, Symboltransformationen und die Bildung eines Gewinnclusters sein. Nachdem der Modifikator abgelaufen ist, sehen Sie, wie die Telefonanzeige auf 35 ansteigt. Wenn Sie diesen Meilenstein erreichen, erhalten Sie ein Freispiel namens „Herbst“ mit einer Funktion. Sie können spielen, um mehr Funktionen zu erhalten, aber wenn Sie verlieren, landen Sie wieder bei Autumn. Die Idee ist, dass 1 Modifikator bei Ihrem ersten Dreh erscheint und wenn Sie sich entscheiden zu spielen und es sich auszahlt, oder Sie die Telefonanzeige weiter vergrößern lassen, werden Sie beim nächsten Aufladen des Telefons 2 Modifikatoren sehen – und bald. Das Telefon wird bei 15, 35, 40, 45 oder 50 Gewinnsymbolen aufgeladen. Es liegt an Ihnen, ob Sie versuchen möchten, über die Glücksspieloption sofort dorthin zu gelangen, oder auf das Beste hoffen, wenn reguläre Gewinnsymbole auf das Raster fallen. Für einige Spieler wird Hugo Legacy eine Reise in die Vergangenheit sein und nostalgische Gefühle aus ihrer Kindheit wecken. Andere fragen sich vielleicht, wer zum Teufel Hugo ist und warum er in einen Spielautomaten verwandelt wurde?! Auch wenn Sie diesen niedlichen kleinen Troll noch nie kennengelernt haben, ist es unserer Meinung nach dennoch einen Blick auf den Slot wert, denn vielleicht werden Sie ihn und all die Modifikatoren, die er bietet, einfach lieben lernen."/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

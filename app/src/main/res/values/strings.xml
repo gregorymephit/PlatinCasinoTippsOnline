@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PlatinCasinoTippsOnline</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy_text">Text here</string>
+    <string name="nachrichten_aktuelles"><![CDATA[Nachrichten & Aktuelles]]></string>
+    <string name="nachrichten_and_aktuelles_d">Nachrichten and Aktuelles</string>
+    <string name="hudo_legacy_d">Hudo legacy</string>
+    <string name="mehr_erfahren_d">Mehr erfahren</string>
+    <string name="top_spielautomaten">Top spielautomaten</string>
+    <string name="top_spielautomaten_d">Top spielautomaten</string>
+    <string name="banner_d">Banner</string>
+    <string name="game">GAME!!!</string>
+</resources>
