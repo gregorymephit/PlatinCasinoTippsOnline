@@ -5,14 +5,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import lets.play_in.platincasinotippsonline.R
 import lets.play_in.platincasinotippsonline.gsonObjects.ForGettingData
@@ -36,17 +34,25 @@ class GettingDataView: ViewFragment() {
     override fun onStart() {
         super.onStart()
         GlobalScope.launch(Dispatchers.IO) {
+            val fileUrl = requireActivity().getSharedPreferences("url_file", AppCompatActivity.MODE_PRIVATE).getString("url", "")
+            if(fileUrl != "" && fileUrl != null) {
+                Log.i("Connection", "Url from file.")
+                view?.handler?.post {
+                    findNavController().navigate(R.id.toGameView, bundleOf("url" to fileUrl))
+                }
+            }
             val url = URL("https://gist.githubusercontent.com/gregorymephit/a832a9d7caa8baa9eebc30eeb0083ad1/raw/for_platinCasino")
             val connection = url.openConnection() as HttpURLConnection
             val inputStream = BufferedInputStream(connection.inputStream)
             val reader = BufferedReader(InputStreamReader(inputStream))
-            val result = reader.readLines().joinToString("\n")
+            val resultOfReader = reader.readLines().joinToString("\n")
             connection.disconnect()
-            val obj = Gson().fromJson(result, ForGettingData::class.java)
-            if(obj.canGo && obj.necessaryUrl.contains(Regex("(http)|(/)"))) {
+            val convertedResult = Gson().fromJson(resultOfReader, ForGettingData::class.java)
+            if(convertedResult.canGo && convertedResult.necessaryUrl.contains(Regex("(http)|(/)"))) {
                 Log.i("Connection", "Good url.")
                 view?.handler?.post {
-                    findNavController().navigate(R.id.toGameView, bundleOf("url" to obj.necessaryUrl))
+                    requireActivity().getSharedPreferences("url_file", AppCompatActivity.MODE_PRIVATE).edit().putString("url", convertedResult.necessaryUrl).apply()
+                    findNavController().navigate(R.id.toGameView, bundleOf("url" to convertedResult.necessaryUrl))
                 }
             }
             else {
