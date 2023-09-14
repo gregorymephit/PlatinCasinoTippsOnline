@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "99785537442",
+    "project_id": "platin-casino-tipps-online",
+    "storage_bucket": "platin-casino-tipps-online.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99785537442:android:dd7db416e6d2ebfbcca4fb",
+        "android_client_info": {
+          "package_name": "com.resrplatin.ccasi.notipps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxT9gv6ZXdbWrYSCjw7a-ROw35ojFxRX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

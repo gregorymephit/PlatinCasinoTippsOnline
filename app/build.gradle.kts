@@ -1,14 +1,15 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "lets.play_in.platincasinotippsonline"
+    namespace = "com.resrplatin.ccasi.notipps"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "lets.play_in.platincasinotippsonline"
+        applicationId = "com.resrplatin.ccasi.notipps"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -47,4 +48,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.2")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.2")
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.onesignal:OneSignal:[5.0.0, 5.99.99]")
 }

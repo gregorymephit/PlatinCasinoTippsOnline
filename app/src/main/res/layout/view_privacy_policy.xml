@@ -14,7 +14,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginVertical="8dp"
         android:layout_marginHorizontal="24dp"
         android:orientation="vertical"
         android:gravity="center_horizontal"
@@ -31,12 +31,18 @@
             android:text="@string/privacy_policy"
             app:layout_constraintTop_toBottomOf="@+id/include" />
 
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="12dp"
-            android:textSize="16sp"
-            android:text="@string/privacy_policy_text" />
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_policy_text"
+                android:textSize="16sp" />
+        </ScrollView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

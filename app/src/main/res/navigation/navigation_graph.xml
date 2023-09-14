@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/gettingDataView"
-        android:name="lets.play_in.platincasinotippsonline.views.gettingDataView.GettingDataView"
+        android:name="com.resrplatin.ccasi.notipps.views.gettingDataView.GettingDataView"
         android:label="Getting data"
         tools:layout="@layout/view_getting_data" >
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/categoriesView"
-        android:name="lets.play_in.platincasinotippsonline.views.categoriesView.CategoriesView"
+        android:name="com.resrplatin.ccasi.notipps.views.categoriesView.CategoriesView"
         android:label="CategoriesView"
         tools:layout="@layout/view_categories" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/privacyPolicyView"
-        android:name="lets.play_in.platincasinotippsonline.views.privacyPolicyView.PrivacyPolicyView"
+        android:name="com.resrplatin.ccasi.notipps.views.privacyPolicyView.PrivacyPolicyView"
         android:label="PrivacyPolicyView"
         tools:layout="@layout/view_privacy_policy"/>
 
@@ -43,7 +43,7 @@
         app:destination="@id/privacyPolicyView"/>
     <fragment
         android:id="@+id/infoView"
-        android:name="lets.play_in.platincasinotippsonline.views.infoView.InfoView"
+        android:name="com.resrplatin.ccasi.notipps.views.infoView.InfoView"
         android:label="InfoView"
         tools:layout="@layout/info_view"/>
 
@@ -52,17 +52,17 @@
         app:destination="@id/infoView"/>
     <fragment
         android:id="@+id/newsAndAffairsView"
-        android:name="lets.play_in.platincasinotippsonline.views.newsAndAffairsView.NewsAndAffairsView"
+        android:name="com.resrplatin.ccasi.notipps.views.newsAndAffairsView.NewsAndAffairsView"
         android:label="NewsAndAffairsView"
         tools:layout="@layout/view_elements"/>
     <fragment
         android:id="@+id/topSlotMachinesView"
-        android:name="lets.play_in.platincasinotippsonline.views.topSlotMachinesView.TopSlotMachinesView"
+        android:name="com.resrplatin.ccasi.notipps.views.topSlotMachinesView.TopSlotMachinesView"
         android:label="TopSlotMachinesView"
         tools:layout="@layout/view_elements"/>
     <fragment
         android:id="@+id/gameView"
-        android:name="lets.play_in.platincasinotippsonline.views.gameView.GameView"
+        android:name="com.resrplatin.ccasi.notipps.views.gameView.GameView"
         android:label="GameView"
         tools:layout="@layout/view_game"/>
 </navigation>
