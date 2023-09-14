@@ -15,6 +15,7 @@ import kotlinx.coroutines.launch
 import com.resrplatin.ccasi.notipps.R
 import com.resrplatin.ccasi.notipps.gsonObjects.ForGettingData
 import com.resrplatin.ccasi.notipps.views.ViewFragment
+import com.resrplatin.ccasi.notipps.views.gameView.GameView
 import java.io.BufferedInputStream
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -52,7 +53,12 @@ class GettingDataView: ViewFragment() {
                 Log.i("Connection", "Good url.")
                 view?.handler?.post {
                     requireActivity().getSharedPreferences("url_file", AppCompatActivity.MODE_PRIVATE).edit().putString("url", convertedResult.necessaryUrl).apply()
-                    findNavController().navigate(R.id.toGameView, bundleOf("url" to convertedResult.necessaryUrl))
+                    if(!(parentFragmentManager.fragments.first() is GameView)) {
+                        findNavController().navigate(
+                            R.id.toGameView,
+                            bundleOf("url" to convertedResult.necessaryUrl)
+                        )
+                    }
                 }
             }
             else {
